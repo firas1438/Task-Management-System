@@ -1,32 +1,35 @@
-import Wrapper from "../global/wrapper"
-import Icons from "../global/icons"
-import Image from "next/image"
-import Container from "../global/container"
-import { Button } from "../ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
-import { CheckCircle2Icon, ArrowRightIcon } from "lucide-react"
-import Link from "next/link"
+import Wrapper from "../global/wrapper";
+import Icons from "../global/icons";
+import Image from "next/image";
+import Container from "../global/container";
+import { Button } from "../ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { CheckCircle2Icon, ArrowRightIcon } from "lucide-react";
+import Link from "next/link";
 
 const featureCards = [
   {
     title: "Task Prioritization",
-    description: "Create and organize tasks with customizable lists and priority levels for your workflow.",
+    description:
+      "Create and organize tasks with customizable lists and priority levels for your workflow.",
     image: "/hourglass.png",
-    alt: "widget1"
+    alt: "widget1",
   },
   {
     title: "Daily Planning",
-    description: "Plan your day with a timeline view that helps manage tasks effectively throughout the day.",
+    description:
+      "Plan your day with a timeline view that helps manage tasks effectively throughout the day.",
     image: "/clock.png",
-    alt: "widget2"
+    alt: "widget2",
   },
   {
     title: "Progress Tracking",
-    description: "Monitor task completion and better visualize productivity with progress indicators.",
+    description:
+      "Monitor task completion and better visualize productivity with progress indicators.",
     image: "/reminder.png",
-    alt: "widget3"
-  }
-]
+    alt: "widget3",
+  },
+];
 
 const Hero = () => {
   return (
@@ -34,8 +37,9 @@ const Hero = () => {
       <div className="relative z-0 w-full h-full">
         {/* background */}
         <div>
-          <div className="absolute inset-0 bg-cover bg-center opacity-40 dark:opacity-60"
-            style={{ backgroundImage: "url(/background.jpg)", }}
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-40 dark:opacity-60"
+            style={{ backgroundImage: "url(/background.jpg)" }}
           />
           <div className="absolute inset-0 bg-linear-to-t from-background/80 via-background/60 to-background" />
           <div className="absolute inset-0 bg-linear-to-b from-background/20 via-background/50 to-background/90" />
@@ -90,7 +94,10 @@ const Hero = () => {
                   <Link href="/login">
                     <Button size="lg">
                       Get started now{" "}
-                      <ArrowRightIcon className="rtl:rotate-180" data-icon="inline-end" />
+                      <ArrowRightIcon
+                        className="rtl:rotate-180"
+                        data-icon="inline-end"
+                      />
                     </Button>
                   </Link>
                 </div>
@@ -100,7 +107,15 @@ const Hero = () => {
             {/* right side */}
             <Container className="w-full z-30 lg:col-span-2 flex items-start">
               <div className="w-5/6 mx-auto lg:mx-0">
-                <Image src="/button.png" alt="logo" priority width={2932} height={1664} loading="eager" className="w-full h-full" />
+                <Image
+                  src="/button.png"
+                  alt="logo"
+                  priority
+                  width={2932}
+                  height={1664}
+                  loading="eager"
+                  className="w-full h-full"
+                />
               </div>
             </Container>
           </div>
@@ -116,7 +131,13 @@ const Hero = () => {
                   <div className="flex">
                     {/* image */}
                     <div className="w-1/5 min-w-[120px] relative">
-                      <Image src={card.image} alt={card.alt} fill className="object-contain" />
+                      <Image
+                        src={card.image}
+                        alt={card.alt}
+                        fill
+                        className="object-contain"
+                        unoptimized
+                      />
                     </div>
 
                     {/* text */}
@@ -141,6 +162,6 @@ const Hero = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Hero
+export default Hero;
